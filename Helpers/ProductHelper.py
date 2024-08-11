@@ -4,7 +4,7 @@ class ProductHelper(Product):
     def create_item_from_text():
         products = []
 
-        with open("Products.txt", "r") as products_file:
+        with open("../Products.txt", "r") as products_file:
             for line in products_file:
                 id, name, price, quantity = line.strip().split(", ")
 
