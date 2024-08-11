@@ -1,4 +1,4 @@
-from Product import Product
+from Models.Product import Product
 class ProductHelper(Product):
     @staticmethod
     def create_item_from_text():
