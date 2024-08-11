@@ -14,6 +14,12 @@ class ProductHelper(Product):
 
                 product = Product(name, price, quantity)
                 products.append(product)
+        return products
     @staticmethod
-    def get_total_balance():
-        pass
+    def get_total_balance(products):
+        total = 0
+        for product in products:
+            total += product.get_price() * product.get_quantity()
+
+        total_with_vat = total * 1.20
+        return total_with_vat
